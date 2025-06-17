@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
+@theme inline {
+  /* Colors */
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-quick-silver: hsla(0, 0%, 65%, 1);
+  --color-davys-grey: hsla(30, 3%, 34%, 1);
+
+  --color-smoky-black-1: hsla(40, 12%, 5%, 1);
+  --color-smoky-black-2: hsla(30, 8%, 5%, 1);
+  --color-smoky-black-3: hsla(0, 3%, 7%, 1); /* was referencing var, now hardcoded */
+
+  --color-eerie-black-1: hsla(210, 4%, 9%, 1);
+  --color-eerie-black-2: hsla(210, 4%, 11%, 1);
+  --color-eerie-black-3: rgb(20, 21, 21); /* already correct */
+  --color-eerie-black-4: hsla(0, 0%, 13%, 1);
+
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --color-white-alpha-10: hsla(0, 0%, 100%, 0.1);
+
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --color-black-alpha-15: hsla(0, 0%, 0%, 0.15);
+
+  --color-gold-crayola: hsl(38, 61%, 73%); /* already included */
+
+  /* Fonts */
+  --font-forum-display: var(--font-forum-display);
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --quick-silver: hsla(0, 0%, 65%, 1);
+  --davys-grey: hsla(30, 3%, 34%, 1);
+  --smoky-black-1: hsla(40, 12%, 5%, 1);
+  --smoky-black-2: hsla(30, 8%, 5%, 1);
+  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --eerie-black-1: hsla(210, 4%, 9%, 1);
+  --eerie-black-2: hsla(210, 4%, 11%, 1);
+  --eerie-black-3: rgb(20, 21, 21);
+  --eerie-black-4: hsla(0, 0%, 13%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+  --black: hsla(0, 0%, 0%, 1);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html{
+  scroll-behavior: smooth;
+::-webkit-scrollbar { width: 5px; }
+
+::-webkit-scrollbar-track { background-color: transparent; }
+
+::-webkit-scrollbar-thumb { background-color: hsl(38, 61%, 73%); }
+}
+body {
+  background: #0a0a0a;
+  color: var(--white);
+  font-family: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* REUSABLES */
+
+.nav-open-btn .line {
+  transform-origin: left;
+  animation: menuBtn 500ms ease-in-out alternate infinite;
+}
+
+@keyframes menuBtn {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.5);
   }
 }
+.nav-open-btn .line-2 {
+  animation-delay: 150ms;
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.nav-open-btn .line-3 {
+  animation-delay: 300ms;
+}
+
+.move-anim { animation: move 5s linear infinite; }
+
+@keyframes move {
+  0%,
+  100% { transform: translateY(0); }
+
+  50% { transform: translateY(30px); }
 }
