@@ -1,5 +1,8 @@
 import { DM_Sans, Forum, Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import getDetails from "../../libs/GetDetails";
+import LandingPageInitializer from "@/components/LandingPageInitializer";
+import PreloadGate from "@/components/PreloadGate";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,13 +62,20 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+
+
+export default async function RootLayout({ children }) {
+const details = await getDetails();
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${poppins.variable} ${dmSans.variable} ${geistMono.variable} ${forumDisplay.variable} antialiased`}
       >
+        <LandingPageInitializer data={details} />
+        <PreloadGate>
         {children}
+        </PreloadGate>
       </body>
     </html>
   );

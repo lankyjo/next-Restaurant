@@ -51,7 +51,7 @@ const menuItems = [
 
 const Selection = () => {
   return (
-    <section className="bg-eerie-black-2 py-10 md:py-20 relative isolate overflow-hidden">
+    <section className="bg-smoky-black-1 py-10 md:py-20 relative isolate overflow-hidden">
       <div className="container mx-auto px-5 2xl:px-0 space-y-10">
         <div className="flex items-center justify-center flex-col gap-[2px] text-gold-crayola">
           Special Selection
@@ -75,7 +75,7 @@ const Selection = () => {
                 ))}
             </div>
         </div>
-        <div className="text-center space-y-4">
+        {/* <div className="text-center space-y-4">
                     <p>During winter daily from 7:00 pm to 9:00 pm</p>
                   <Link
             href={'#'}
@@ -86,13 +86,13 @@ const Selection = () => {
             </p>
             <span className="absolute left-0 top-0 w-full h-0 bg-gold-crayola transition-all duration-500 ease-in-out group-hover:h-full z-0" />
           </Link>
-        </div>
+        </div> */}
       </div>
       
-                <Image src="/images/shape-5.png" width={921} height={1036} alt="shape"
+                {/* <Image src="/images/shape-5.png" width={921} height={1036} alt="shape"
             className=" move-anim left-0 top-0 absolute -z-1"/>
           <Image src="/images/shape-6.png" width={343} height={345} alt="shape"
-            className="absolute right-0 bottom-0 move-anim -z-1"/>
+            className="absolute right-0 bottom-0 move-anim -z-1"/> */}
 
     </section>
   );

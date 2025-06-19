@@ -17,13 +17,13 @@ export default function Home() {
       <Hero/>
       <Offer/>
       <Story/>
-      <Special/>
+      {/* <Special/> */}
       <Selection/>
-      <Testimonial/>
-      <Reservation/>
+      {/* <Testimonial/> */}
       <Choose/>
       <Update/>
-      <Footer/>
+      <Reservation/>
+      {/* <Footer/> */}
     </main>
   );
 } 

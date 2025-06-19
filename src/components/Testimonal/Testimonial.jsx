@@ -3,7 +3,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <section className="pt-10 md:pt-20 pb-60 min-h-dvh bg-[url(/images/testimonial-bg.jpg)]">
+    <section className="py-10 md:py-20 min-h-[600px] bg-[url(/images/testimonial-bg.jpg)]">
       <div className="max-w-[950px] mx-auto px-5 xl:px-0 space-y-25">
         <div className="text-center text-3xl  md:text-5xl font-forum-display flex flex-col">
             <span className="text-6xl leading-[0.8em]">”</span>

@@ -30,13 +30,13 @@ const timeOptions = [
 
 const Reservation = () => {
   return (
-    <section className='relative bg-eerie-black-2 md:px-20 pt-20 -mb-30'>
-      <div className='container mx-auto px-4 xl:px-0 flex flex-col lg:flex-row min-h-[600px] max-w-[1150px] relative -top-60 left-1/2 -translate-x-1/2  z-50'>
+    <section className='relative bg-smoky-black-1 md:px-20 py-20'>
+      <div className='container mx-auto px-4 xl:px-0 flex flex-col lg:flex-row min-h-[500px] relative z-50'>
       {/* FORM AREA */}
         <div className='flex-2 space-y-10 px-5 md:px-10 py-10 md:py-20 bg-smoky-black-1'>
           <div className='text-center space-y-2'>
-            <h4 className='font-forum-display text-4xl md:text-6xl'>Online Reservation</h4>
-            <p>Booking request +88-123-123456 or fill out the order form</p>
+            <h4 className='font-forum-display text-4xl md:text-6xl'>Stay Connected</h4>
+            <p>Subscribe to our Newsletter</p>
           </div>
 
           <div className='space-y-5'>
@@ -45,14 +45,15 @@ const Reservation = () => {
               <Inputs type='tel' placeholder='Phone Number' />
             </div>
             <div className='flex flex-col md:flex-row gap-5'>
-              <Select options={personOptions} placeholder='Person' />
+              {/* <Select options={personOptions} placeholder='Person' />
               <Inputs type='date' placeholder='Date' />
-              <Select options={timeOptions} placeholder='Time' />
+              <Select options={timeOptions} placeholder='Time' /> */}
+              <Inputs type={'email'} placeholder={'Email'}/>
             </div>
-            <textarea className='border border-white-alpha-10 p-4 bg-eerie-black-4 w-full focus:border-gold-crayola outline-none min-h-40' placeholder='message'></textarea>
+            {/* <textarea className='border border-white-alpha-10 p-4 bg-eerie-black-4 w-full focus:border-gold-crayola outline-none min-h-40' placeholder='message'></textarea> */}
                               <button className="md:flex-1 w-full cursor-pointer group border border-transparent hover:border-gold-crayola relative md:inline-block text-[14px] font-medium uppercase py-4 px-10 bg-gold-crayola text-black overflow-hidden">
                     <p className="relative text-sm tracking-widest z-10 transition-colors duration-300 group-hover:text-gold-crayola">
-                      Book table
+                      Subscribe Now
                     </p>
                     <span className="absolute left-0 top-0 w-full h-0 bg-black transition-all duration-500 ease-in-out group-hover:h-full z-0" />
                   </button>

@@ -17,7 +17,7 @@ const socialLinks = [
 ];
 const Footer = () => {
   return (
-    <footer className="min-h-dvh flex flex-col bg-[url(/images/footer-bg.jpg)] py-20 bg-cover bg-center bg-no-repeat">
+    <footer className="min-h-[500px] flex flex-col bg-[url(/images/footer-bg.jpg)] py-20 bg-cover bg-center bg-no-repeat">
       <div className="container mx-auto px-5 xl:px-0 flex-1 flex flex-col gap-10">
         <div className="flex-1 grid max-xl:gap-10 max-sm:grid-cols-1 max-xl:grid-cols-2 xl:grid-cols-[2fr_3fr_2fr] justify-center items-center">
           {/* LEFT */}

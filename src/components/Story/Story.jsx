@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Story = () => {
   return (
-    <section className=" py-20 bg-eerie-black-2 overflow-x-hidden">
+    <section id="discover" className=" py-20 bg-eerie-black-2 overflow-x-hidden">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 px-4 gap-10">
         {/* TEXT */}
         <div className="text-center space-y-5">
