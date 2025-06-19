@@ -30,7 +30,7 @@ const timeOptions = [
 
 const Reservation = () => {
   return (
-    <section className='relative bg-smoky-black-1 md:px-20 py-20'>
+    <section id='contact' className='relative bg-smoky-black-1 md:px-20 py-20'>
       <div className='container mx-auto px-4 xl:px-0 flex flex-col lg:flex-row min-h-[500px] relative z-50'>
       {/* FORM AREA */}
         <div className='flex-2 space-y-10 px-5 md:px-10 py-10 md:py-20 bg-smoky-black-1'>
