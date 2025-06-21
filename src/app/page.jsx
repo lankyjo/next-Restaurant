@@ -2,12 +2,12 @@ import Story from "@/components/Story/Story";
 import MainHeader from "../components/Header/MainHeader";
 import Hero from "../components/Hero/Hero";
 import Offer from "../components/Offer/Offer";
-import Special from "@/components/Special/Special";
-import Footer from "@/components/Footer/Footer";
+// import Special from "@/components/Special/Special";
+// import Footer from "@/components/Footer/Footer";
 import Selection from "@/components/Selection/Selection";
-import Testimonial from "@/components/Testimonal/Testimonial";
+// import Testimonial from "@/components/Testimonal/Testimonial";
 import Reservation from "@/components/Reservation/Reservation";
-import Choose from "@/components/Choose/Choose";
+// import Choose from "@/components/Choose/Choose";
 import Update from "@/components/Update/Update";
 
 export default function Home() {
@@ -15,12 +15,12 @@ export default function Home() {
     <main className="">
       <MainHeader/>
       <Hero/>
-      <Offer/>
       <Story/>
       {/* <Special/> */}
+      <Offer/>
       <Selection/>
       {/* <Testimonial/> */}
-      <Choose/>
+      {/* <Choose/> */}
       <Update/>
       <Reservation/>
       {/* <Footer/> */}

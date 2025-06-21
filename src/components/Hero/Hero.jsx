@@ -96,7 +96,7 @@ const Hero = () => {
       
       <div className="relative z-20 mt-20 w-full text-center max-w-[700px] space-y-5">
         <div className={`flex items-center justify-center flex-col gap-[2px]`}>
-          <p className="text-gold-crayola uppercase tracking-wide">
+          <p className="text-gold-crayola uppercase text-[8px] md:text-[10px] tracking-wide">
             {details.heroTicker}
           </p>
           <span className="text-gold-crayola uppercase tracking-wide">

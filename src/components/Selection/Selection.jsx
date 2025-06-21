@@ -1,7 +1,9 @@
+'use client'
 import React from "react";
 import Seperator from "../Seperator";
 import Image from "next/image";
 import Link from "next/link";
+import { RevealWrapper } from "next-reveal";
 
 const menuItems = [
   {
@@ -65,13 +67,17 @@ const Selection = () => {
             {/* LEFT */}
             <div className="xl:pr-15 space-y-5">
                 {menuItems.slice(0, 3).map((menuItem, index) => (
+                  <RevealWrapper key={index} origin="bottom" distance="80px" opacity={0} easing="ease" duration={2000} delay={index * 500}>
                     <MenuCard key={index} {...menuItem} />
+                  </RevealWrapper>
                 ))}
             </div>
             {/* LEFT */}
             <div className="xl:pl-15 space-y-5">
                 {menuItems.slice(3).map((menuItem, index) => (
+                  <RevealWrapper key={index} origin="bottom" distance="50px" opacity={0} easing="ease" duration={1000} delay={index * 500}>
                     <MenuCard key={index} {...menuItem} />
+                  </RevealWrapper>
                 ))}
             </div>
         </div>
