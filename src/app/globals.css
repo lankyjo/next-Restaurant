@@ -24,7 +24,9 @@
   --color-black-alpha-80: hsla(0, 0%, 0%, 0.8);
   --color-black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
-  --color-gold-crayola: hsl(38, 61%, 73%); /* already included */
+  --color-gold-crayola: hsl(38, 61%, 73%); 
+  /* --color-gold-crayola: rgb(239, 121, 13); already included */
+
 
   /* Fonts */
   --font-forum-display: var(--font-forum-display);
@@ -51,14 +53,15 @@
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 }
 
-html{
+html, body{
   scroll-behavior: smooth;
+}
 ::-webkit-scrollbar { width: 5px; }
 
 ::-webkit-scrollbar-track { background-color: transparent; }
 
 ::-webkit-scrollbar-thumb { background-color: hsl(38, 61%, 73%); }
-}
+
 body {
   background: #0a0a0a;
   color: var(--white);

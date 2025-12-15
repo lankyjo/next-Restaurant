@@ -4,14 +4,17 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TopBar from "./TopBar";
+import useLandingPageStore from "../../../libs/useLandingPageStore";
 
 const navLinks = [
   { name: "Home", link: "/" },
-  { name: "Menus", link: "#menus" },
-  { name: "About Us", link: "#" },
-  { name: "Our Chefs", link: "#our-chefs" },
+  { name: "About", link: "#about" },
+  { name: "Log-in", link: "#" },
+  { name: "Discover", link: "#discover" },
   { name: "Contact", link: "#contact" },
 ];
+
+
 
 const MainHeader = () => {
   const [isOpen, setIsOpen] = useState(false); // controls slide
@@ -73,6 +76,7 @@ const MainHeader = () => {
       document.body.style.overflow = "auto";
     }, 200); // match overlay fade duration
   };
+const details = useLandingPageStore((state) => state.details);
 
   return (
     <header className={`fixed top-0 left-0 w-full z-51 transition-all duration-300 ease-in-out ${
@@ -81,12 +85,25 @@ const MainHeader = () => {
       hasScrolled ? 'bg-eerie-black-4/70 backdrop-blur-md shadow-lg pb-6' : 'bg-transparent'
     }`}>
       <TopBar />
-      <div className="container mx-auto px-4 xl:px-0 flex justify-between pt-7 items-center">
-        <Link href="/">
-          <Image width={160} height={50} src="/images/logo.svg" alt="logo" />
+      <div className="container mx-auto px-4 2xl:px-0 flex justify-between pt-7 items-center">
+        <Link scroll={false} href="/">
+          {/* <Image width={160} height={50} src="/images/logo.svg" alt="logo" /> */}
+          {/* <h1 className="text-5xl font-forum-display first-letter:text-gold-crayola">Logo</h1> */}
+          {
+            details?.logo.image ? 
+            <Image width={160} height={50} src={details?.logo.image.url} alt="logo" />
+            :
+            <h1 className="text-4xl md:text-5xl font-forum-display first-letter:text-gold-crayola">{details.logo.text}</h1>
+          }
         </Link>
 
-        <div className="flex items-center gap-5">
+
+
+
+
+
+        {/* MENU */}
+
           <ul className="xl:flex hidden items-center gap-5 uppercase font-semibold text-[14px]">
             {navLinks.map((link, index) => (
               <li key={index} className="relative tracking-widest text-[12px] hover:text-gold-crayola  group py-3">
@@ -99,12 +116,13 @@ const MainHeader = () => {
             ))}
           </ul>
 
+        <div className="flex items-center gap-5">
           <Link
             href="#"
             className="group hidden border border-transparent hover:border-gold-crayola relative md:inline-block text-[14px] font-medium uppercase py-5 px-10 bg-gold-crayola text-black overflow-hidden"
           >
             <p className="relative z-10 transition-colors duration-300 group-hover:text-gold-crayola">
-              find a table
+              Get Tickets
             </p>
             <span className="absolute left-0 top-0 w-full h-0 bg-black transition-all duration-500 ease-in-out group-hover:h-full z-0" />
           </Link>
@@ -119,6 +137,7 @@ const MainHeader = () => {
             <span className="line line-2 w-12 bg-white h-0.5"></span>
             <span className="line line-3 w-12 bg-white h-0.5"></span>
           </button>
+
         </div>
       </div>
 
@@ -136,6 +155,8 @@ const MainHeader = () => {
 export default MainHeader;
 
 const MobileNav = ({ isOpen, isOverlayVisible, onClose }) => {
+  const details = useLandingPageStore((state) => state.details);
+
   return (
     <div
       id="mobile-menu"
@@ -150,7 +171,15 @@ const MobileNav = ({ isOpen, isOverlayVisible, onClose }) => {
         <IoIosCloseCircleOutline/>
         </button>
 
-        <Image width={160} height={50} src="/images/logo.svg" className="mx-auto" alt="logo" />
+        {/* <Image width={160} height={50} src="/images/logo.svg" className="mx-auto" alt="logo" /> */}
+        <div>
+          {
+                        details?.logo.image ? 
+            <Image width={160} height={50} src={details?.logo.image.url} alt="logo" className="mx-auto" />
+            :
+            <h1 className="text-4xl md:text-5xl text-center font-forum-display first-letter:text-gold-crayola">{details.logo.text}</h1>
+          }
+        </div>
 
         <ul className="my-15">
           {navLinks.map((link, index) => (

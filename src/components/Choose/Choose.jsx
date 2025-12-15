@@ -32,14 +32,14 @@ const features = [
 
 const Choose = () => {
   return (
-    <section className='bg-eerie-black-2 relative pb-15 md:pb-25'>
+    <section className='bg-eerie-black-2 relative py-10 md:py-20'>
         <div className=' container mx-auto px-5 2xl:px-0 space-y-8'>
             <div className='text-center space-y-1 flex flex-col justify-center items-center' >
-                <h5 className=' text-gold-crayola tracking-widest uppercase'>why choose us</h5>
+                <h5 className=' text-gold-crayola tracking-widest uppercase'>sponsor block</h5>
                 <Seperator/>
             </div>
 
-            <h2 className='text-4xl md:text-6xl font-forum-display text-center'>Our Strength</h2>
+            <h2 className='text-4xl md:text-6xl font-forum-display text-center'>Our Sponsors</h2>
 
             <div className='grid grid-cols-1 max-sm:place-items-center md:grid-cols-2 xl:grid-cols-4 gap-5'>
               {features.map((feature, index) => (
